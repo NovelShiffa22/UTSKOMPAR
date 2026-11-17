@@ -28,7 +28,7 @@ Repositori/direktori ini berisi seluruh kode sumber, definisi kontainer, skrip k
 2. **Klaster HPC (`compute01` & `compute02`):**
    * `apptainer` terinstal di setiap node.
    * Koneksi SSH tanpa password (*passwordless SSH*) aktif dari `compute01` ke `compute02`.
-   * Antarmuka jaringan internal TCP `10.236.0.0/24` aktif antar-node.
+     
 
 ---
 
@@ -102,16 +102,6 @@ Skenario yang dijalankan otomatis oleh skrip ini meliputi:
 1. **Baseline Serial:** $N = 40.000.000$ elemen (3 pengulangan).
 2. **Strong Scaling:** Ukuran total tetap $N = 40.000.000$ elemen dengan variasi proses $P \in \{1, 2, 4, 8, 16\}$ (masing-masing 3 pengulangan).
 3. **Weak Scaling:** Beban tetap $N/P = 5.000.000$ elemen per proses untuk $P \in \{1, 2, 4, 8, 16\}$ (total $N$ dari $5.000.000$ hingga $80.000.000$ elemen, masing-masing 3 pengulangan).
-
----
-
-### Tahap 5: Reproduksi Grafik Analisis (Opsional / Lokal)
-Unduh file `hasil_eksperimen.txt` ke mesin lokal dan jalankan skrip plotting Python untuk menghasilkan grafik performa:
-
-```bash
-scp -P 3009 kompargj27-g8@172.232.232.34:~/uts_samplesort_g8/hasil_eksperimen.txt .
-python3 plot_results.py
-```
 
 ---
 
