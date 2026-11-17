@@ -1,0 +1,17 @@
+Bootstrap: docker
+From: ubuntu:22.04
+
+%files
+    serial_sort.c /opt/src/serial_sort.c
+    parallel_sample_sort.c /opt/src/parallel_sample_sort.c
+
+%post
+    apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
+        build-essential openmpi-bin libopenmpi-dev && \
+        rm -rf /var/lib/apt/lists/*
+    mkdir -p /opt/bin
+    gcc -O3 /opt/src/serial_sort.c -o /opt/bin/serial_sort
+    mpicc -O3 /opt/src/parallel_sample_sort.c -o /opt/bin/parallel_sample_sort
+
+%environment
+    export PATH=/opt/bin:$PATH
