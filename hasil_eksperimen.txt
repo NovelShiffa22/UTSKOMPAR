@@ -1,0 +1,38 @@
+=== 1. BASELINE SERIAL (N = 40,000,000) ===
+Serial N=40000000 | Time=5.607510 s | Valid=YES
+Serial N=40000000 | Time=5.530597 s | Valid=YES
+Serial N=40000000 | Time=5.553207 s | Valid=YES
+
+=== 2. STRONG SCALING (Fixed Total N = 40,000,000) ===
+Parallel P=1 | N=40000000 | MaxTime=14.341511 s | Valid=YES
+Parallel P=1 | N=40000000 | MaxTime=14.467336 s | Valid=YES
+Parallel P=1 | N=40000000 | MaxTime=14.522412 s | Valid=YES
+Parallel P=2 | N=40000000 | MaxTime=7.461883 s | Valid=YES
+Parallel P=2 | N=40000000 | MaxTime=7.243921 s | Valid=YES
+Parallel P=2 | N=40000000 | MaxTime=7.311701 s | Valid=YES
+Parallel P=4 | N=40000000 | MaxTime=1.807877 s | Valid=YES
+Parallel P=4 | N=40000000 | MaxTime=1.905486 s | Valid=YES
+Parallel P=4 | N=40000000 | MaxTime=1.809584 s | Valid=YES
+Parallel P=8 | N=40000000 | MaxTime=1.346795 s | Valid=YES
+Parallel P=8 | N=40000000 | MaxTime=1.513143 s | Valid=YES
+Parallel P=8 | N=40000000 | MaxTime=1.390099 s | Valid=YES
+Parallel P=16 | N=40000000 | MaxTime=1.212100 s | Valid=YES
+Parallel P=16 | N=40000000 | MaxTime=1.326506 s | Valid=YES
+Parallel P=16 | N=40000000 | MaxTime=1.145288 s | Valid=YES
+
+=== 3. WEAK SCALING (Fixed N/P = 5,000,000 per proses) ===
+Parallel P=1 | N=5000000 | MaxTime=1.594956 s | Valid=YES
+Parallel P=1 | N=5000000 | MaxTime=1.600921 s | Valid=YES
+Parallel P=1 | N=5000000 | MaxTime=1.593927 s | Valid=YES
+Parallel P=2 | N=10000000 | MaxTime=1.675800 s | Valid=YES
+Parallel P=2 | N=10000000 | MaxTime=1.680477 s | Valid=YES
+Parallel P=2 | N=10000000 | MaxTime=1.670134 s | Valid=YES
+Parallel P=4 | N=20000000 | MaxTime=0.919244 s | Valid=YES
+Parallel P=4 | N=20000000 | MaxTime=0.873662 s | Valid=YES
+Parallel P=4 | N=20000000 | MaxTime=0.919054 s | Valid=YES
+Parallel P=8 | N=40000000 | MaxTime=1.829907 s | Valid=YES
+Parallel P=8 | N=40000000 | MaxTime=1.388325 s | Valid=YES
+Parallel P=8 | N=40000000 | MaxTime=1.363563 s | Valid=YES
+Parallel P=16 | N=80000000 | MaxTime=1.575866 s | Valid=YES
+Parallel P=16 | N=80000000 | MaxTime=1.901470 s | Valid=YES
+Parallel P=16 | N=80000000 | MaxTime=2.190953 s | Valid=YES
